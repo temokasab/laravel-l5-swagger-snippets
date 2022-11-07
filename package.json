@@ -1,0 +1,26 @@
+{
+  "name": "laravel-l5-swagger-snippets",
+  "displayName": "Laravel L5 Swagger Snippets",
+  "description": "This extension will generate snippets for Laravel L5 Swagger package. To generate OpenAPI or Swagger Documentation. ",
+  "version": "1.0.0",
+  "publisher": "TemoKatha",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/temokasab/Laravel-l5-swagger-snippets"
+  },
+  "icon": "Icon.png",
+  "engines": {
+    "vscode": "^1.73.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "php",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  }
+}

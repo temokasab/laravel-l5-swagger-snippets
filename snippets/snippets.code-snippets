@@ -1,0 +1,306 @@
+{
+    "@OA\\Info": {
+        "prefix": "@OA\\Info",
+        "body": [
+            "/**",
+            "* @OA\\Info(",
+            "*     version=\"1.0\",",
+            "*     title=\"${1:Title}\"",
+            "* )",
+            "*/",
+        ]
+    },
+
+    "@OA\\PathItem": {
+        "prefix": "@OA\\PathItem",
+        "body": [
+            "/**",
+            "* @OA\\PathItem(path=\"${1:/api}\")",
+            "*/",
+        ]
+    },
+
+    "@OA\\Get": {
+        "prefix": "@OA\\Get",
+        "body": [
+            "/**",
+            "* @OA\\Get(",
+            "*      path=\"${1:Path}\",",
+            "*      operationId=\"${2:TestId}\",",
+            "*      tags={\"${3:Tags}\"},",
+            "*      summary=\"${4:Title}\",",
+            "*      description=\"${5:Description}\",",
+            "*      @OA\\Response(",
+            "*          response=${7:Response Code},",
+            "*          description=\"${8:Response Message}\",",
+            "*       ),",
+            "*     )",
+            "*/"
+        ]
+    },
+
+    "@OA\\Get With Param": {
+        "prefix": "@OA\\GetWithParam",
+        "body": [
+            "/**",
+            "* @OA\\Get(",
+            "*      path=\"${1:Path}\",",
+            "*      operationId=\"${2:TestId}\",",
+            "*      tags={\"${3:Tags}\"},",
+            "*      summary=\"${4:Title}\",",
+            "*      description=\"${5:Description}\",",
+            "*      @OA\\Parameter(",
+            "*          description=\"${6:Parameter with example}\",",
+            "*          in=\"${7:path}\",",
+            "*          name=\"${8:id}\",",
+            "*          required=${9:true},",
+            "*          @OA\\Schema(type=\"${10:int}\"),",
+            "*          @OA\\Examples(example=\"${10:int}\", value=\"${11:1}\", summary=\"${12:an int value}\"),",
+            "*      ),",
+            "*      @OA\\Response(",
+            "*          response=${13:Response Code},",
+            "*          description=\"${14:Response Message}\",",
+            "*       ),",
+            "*     )",
+            "*/"
+        ]
+    },
+
+    "@OA\\Post": {
+        "prefix": "@OA\\Post",
+        "body": [
+            "/**",
+            "* @OA\\Post(",
+            "*      path=\"${1:Path}\",",
+            "*      operationId=\"${2:Title}\",",
+            "*      tags={\"${3:Tags}\"},",
+            "*      summary=\"${4:Summary}\",",
+            "*      description=\"${5:Description}\",",
+            "*      @OA\\Parameter(",
+            "*          description=\"${6:Parameter with example}\",",
+            "*          in=\"${7:path}\",",
+            "*          name=\"${8:id}\",",
+            "*          required=${9:true},",
+            "*          @OA\\Schema(type=\"${10:int}\"),",
+            "*          @OA\\Examples(example=\"${10:int}\", value=\"${11:1}\", summary=\"${12:an int value}\"),",
+            "*      ),",
+            "*      @OA\\RequestBody(",
+            "*          required=${13:true},",
+            "*          @OA\\JsonContent(ref=\"#/components/schemas/${14:Request}\")",
+            "*      ),",
+            "*      @OA\\Response(",
+            "*          response=${15:Response Code},",
+            "*          description=\"${16:Response Message}\",",
+            "*       ),",
+            "*     )",
+            "*/"
+        ]
+    },
+
+    "@OA\\Put": {
+        "prefix": "@OA\\Put",
+        "body": [
+            "/**",
+            "* @OA\\Put(",
+            "*      path=\"${1:Path}\",",
+            "*      operationId=\"${2:Title}\",",
+            "*      tags={\"${3:Tags}\"},",
+            "*      summary=\"${4:Summary}\",",
+            "*      description=\"${5:Description}\",",
+            "*      @OA\\RequestBody(",
+            "*          required=${6:true},",
+            "*          @OA\\JsonContent(ref=\"#/components/schemas/${7:Request}\")",
+            "*      ),",
+            "*      @OA\\RequestBody(",
+            "*          required=${8:true},",
+            "*          @OA\\JsonContent(ref=\"#/components/schemas/${9:Request}\")",
+            "*      ),",
+            "*      @OA\\Response(",
+            "*          response=${10:Response Code},",
+            "*          description=\"${11:Response Message}\",",
+            "*       ),",
+            "*     )",
+            "*/"
+        ]
+    },
+
+    "@OA\\Delete": {
+        "prefix": "@OA\\Delete",
+        "body": [
+            "/**",
+            "* @OA\\Delete(",
+            "*      path=\"${1:Path}\",",
+            "*      operationId=\"${2:Title}\",",
+            "*      tags={\"${3:Tags}\"},",
+            "*      summary=\"${4:Summary}\",",
+            "*      description=\"${5:Description}\",",
+            "*      @OA\\Parameter(",
+            "*          description=\"${6:Parameter with example}\",",
+            "*          in=\"${7:path}\",",
+            "*          name=\"${8:id}\",",
+            "*          required=${9:true},",
+            "*          @OA\\Schema(type=\"${10:int}\"),",
+            "*          @OA\\Examples(example=\"${10:int}\", value=\"${11:1}\", summary=\"${12:an int value}\"),",
+            "*      ),",
+            "*      @OA\\Response(",
+            "*          response=${14:Response Code},",
+            "*          description=\"${15:Response Message}\",",
+            "*       ),",
+            "*     )",
+            "*/"
+        ]
+    },
+
+    "@OA\\Parameter": {
+        "prefix": "@OA\\Parameter",
+        "body": [
+            "*      @OA\\Parameter(",
+            "*          description=\"${1:Parameter with example}\",",
+            "*          in=\"${2:path}\",",
+            "*          name=\"${3:id}\",",
+            "*          required=${4:true},",
+            "*          @OA\\Schema(type=\"${5:int}\"),",
+            "*          @OA\\Examples(example=\"${5:int}\", value=\"${6:1}\", summary=\"${7:an int value}\"),",
+            "*      ),",
+        ]
+    },
+
+    "@OA\\RequestBody Json": {
+        "prefix": "@OA\\RequestBodyJson",
+        "body": [
+            "*      @OA\\RequestBody(",
+            "*          required=${2:true}},",
+            "*          @OA\\JsonContent(ref=\"#/components/schemas/${1:Request}\")",
+            "*      ),",
+        ]
+    },
+
+    "@OA\\RequestBody MediaType": {
+        "prefix": "@OA\\RequestBodyMediaType",
+        "body": [
+            "*      @OA\\RequestBody(",
+            "*         @OA\\MediaType(",
+            "*             mediaType=\"${1:application/json}\",",
+            "*             @OA\\Schema(",
+            "*                 schema=\"${2:Request}\",",
+            "*                 title=\"${3:Title}\",",
+            "*                 @OA\\Property(",
+            "*                     property=\"${4:id}\",",
+            "*                     type=\"${5:int}\"",
+            "*                 ),",
+            "*                 @OA\\Property(",
+            "*                     property=\"${6:name}\",",
+            "*                     type=\"${7:string}\"",
+            "*                 ),",
+            "*                 example={\"${4:id}\": \"${8:string}\", \"${6:name}\": \"${9:string}\"",
+            "*             )",
+            "*         )",
+            "*      ),",
+        ]
+    },
+
+    "@OA\\Response": {
+        "prefix": "@OA\\Response",
+        "body": [
+            "*      @OA\\Response(",
+            "*          response=${1:Response Code},",
+            "*          description=\"${2:Response Message}\",",
+            "*       ),",
+        ]
+    },
+
+    "@OA\\Response Json": {
+        "prefix": "@OA\\ResponseJson",
+        "body": [
+            "*      @OA\\Response(",
+            "*          response=${1:Response Code},",
+            "*          description=\"${2:Response Message}\",",
+            "*           @OA\\JsonContent(",
+            "*              oneOf={",
+            "*                  @OA\\Schema(ref=\"#/components/schemas/${3:Result}\"),",
+            "*                  @OA\\Schema(type=\"${4:boolean}\")",
+            "*              },",
+            "*              @OA\\Examples(example=\"${5:result}\", value={\"${6:success}\": ${7:true}, summary=\"${8:summary}\"),",
+            "*         )",
+            "*       ),",
+        ]
+    },
+
+    "@OA\\MediaType": {
+        "prefix": "@OA\\MediaType",
+        "body": [
+            "*         @OA\\MediaType(",
+            "*             mediaType=\"${1:application/json}\",",
+            "*             @OA\\Schema(",
+            "*                 schema=\"${2:Request}\",",
+            "*                 title=\"${3:Title}\",",
+            "*                 @OA\\Property(",
+            "*                     property=\"${4:id}\",",
+            "*                     type=\"${5:int}\"",
+            "*                 ),",
+            "*                 @OA\\Property(",
+            "*                     property=\"${6:name}\",",
+            "*                     type=\"${7:string}\"",
+            "*                 ),",
+            "*                 example={\"${4:id}\": \"${8:string}\", \"${6:name}\": \"${9:string}\"",
+            "*             )",
+            "*         )",
+        ]
+    },
+
+    "@OA\\Schema": {
+        "prefix": "@OA\\Schema",
+        "body": [
+            "*             @OA\\Schema(",
+            "*                  schema=\"${1:Request}\",",
+            "*                  title=\"${2:Title}\",",
+            "*                 @OA\\Property(",
+            "*                     property=\"${3:id}\",",
+            "*                     type=\"${4:int}\"",
+            "*                 ),",
+            "*                 @OA\\Property(",
+            "*                     property=\"${5:name}\",",
+            "*                     type=\"${6:string}\"",
+            "*                 ),",
+            "*                 example={\"${3:id}\": \"${6:string}\", \"${6:name}\": \"${7:string}\"",
+            "*             )",
+        ]
+    },
+
+    "@OA\\Schema Type": {
+        "prefix": "@OA\\SchemaType",
+        "body": [
+            "*         @OA\\Schema(type=\"${1:string}\"),"
+        ]
+    },
+
+    "@OA\\Property": {
+        "prefix": "@OA\\Property",
+        "body": [
+            "*                 @OA\\Property(",
+            "*                     property=\"${1:id}\",",
+            "*                     type=\"${2:int}\"",
+            "*                 ),",
+        ]
+    },
+
+    "@OA\\JsonContent Full": {
+        "prefix": "@OA\\JsonContentFull",
+        "body": [
+            "*           @OA\\JsonContent(",
+            "*              oneOf={",
+            "*                  @OA\\Schema(ref=\"#/components/schemas/${1:Result}\"),",
+            "*                  @OA\\Schema(type=\"${2:boolean}\")",
+            "*              },",
+            "*              @OA\\Examples(example=\"${3:result}\", value={\"${4:success}\": ${5:true}, summary=\"${6:summary}\"),",
+            "*          )",
+        ]
+    },
+
+    "@OA\\JsonContent Ref": {
+        "prefix": "@OA\\JsonContentRef",
+        "body": [
+            "*          @OA\\JsonContent(ref=\"#/components/schemas/${1:Request}\")",
+        ]
+    },
+}
