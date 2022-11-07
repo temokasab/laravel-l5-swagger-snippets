@@ -76,14 +76,6 @@
             "*      tags={\"${3:Tags}\"},",
             "*      summary=\"${4:Summary}\",",
             "*      description=\"${5:Description}\",",
-            "*      @OA\\Parameter(",
-            "*          description=\"${6:Parameter with example}\",",
-            "*          in=\"${7:path}\",",
-            "*          name=\"${8:id}\",",
-            "*          required=${9:true},",
-            "*          @OA\\Schema(type=\"${10:int}\"),",
-            "*          @OA\\Examples(example=\"${10:int}\", value=\"${11:1}\", summary=\"${12:an int value}\"),",
-            "*      ),",
             "*      @OA\\RequestBody(",
             "*          required=${13:true},",
             "*          @OA\\JsonContent(ref=\"#/components/schemas/${14:Request}\")",
@@ -107,13 +99,17 @@
             "*      tags={\"${3:Tags}\"},",
             "*      summary=\"${4:Summary}\",",
             "*      description=\"${5:Description}\",",
+            "*      @OA\\Parameter(",
+            "*          description=\"${6:Parameter with example}\",",
+            "*          in=\"${7:path}\",",
+            "*          name=\"${8:id}\",",
+            "*          required=${9:true},",
+            "*          @OA\\Schema(type=\"${10:int}\"),",
+            "*          @OA\\Examples(example=\"${10:int}\", value=\"${11:1}\", summary=\"${12:an int value}\"),",
+            "*      ),",
             "*      @OA\\RequestBody(",
             "*          required=${6:true},",
             "*          @OA\\JsonContent(ref=\"#/components/schemas/${7:Request}\")",
-            "*      ),",
-            "*      @OA\\RequestBody(",
-            "*          required=${8:true},",
-            "*          @OA\\JsonContent(ref=\"#/components/schemas/${9:Request}\")",
             "*      ),",
             "*      @OA\\Response(",
             "*          response=${10:Response Code},",
@@ -165,8 +161,8 @@
         ]
     },
 
-    "@OA\\RequestBody Json": {
-        "prefix": "@OA\\RequestBodyJson",
+    "@OA\\RequestBody Ref": {
+        "prefix": "@OA\\RequestBodyRef",
         "body": [
             "*      @OA\\RequestBody(",
             "*          required=${2:true}},",
@@ -199,15 +195,6 @@
         ]
     },
 
-    "@OA\\Response": {
-        "prefix": "@OA\\Response",
-        "body": [
-            "*      @OA\\Response(",
-            "*          response=${1:Response Code},",
-            "*          description=\"${2:Response Message}\",",
-            "*       ),",
-        ]
-    },
 
     "@OA\\Response Json": {
         "prefix": "@OA\\ResponseJson",
@@ -284,8 +271,8 @@
         ]
     },
 
-    "@OA\\JsonContent Full": {
-        "prefix": "@OA\\JsonContentFull",
+    "@OA\\JsonContent": {
+        "prefix": "@OA\\JsonContent",
         "body": [
             "*           @OA\\JsonContent(",
             "*              oneOf={",

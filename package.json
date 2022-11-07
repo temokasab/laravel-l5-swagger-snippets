@@ -6,7 +6,7 @@
   "publisher": "TemoKatha",
   "repository": {
     "type": "git",
-    "url": "https://github.com/temokasab/Laravel-l5-swagger-snippets"
+    "url": "https://github.com/temokasab/laravel-l5-swagger-snippets"
   },
   "icon": "Icon.png",
   "engines": {
