@@ -2,6 +2,14 @@
 
 All notable changes to the "laravel-l5-swagger-snippets" extension will be documented in this file.
 
+## Version [1.0.1]
+##### Bug Fix release
+###### Added/Updated snippets:
+ - @OA\Parameter
+ - @OA\Schema
+ - @OA\SchemaWithProperties
+
+
 ## Version [1.0.0]
 ##### Initial release
 ###### Added snippets:

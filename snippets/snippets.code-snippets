@@ -235,8 +235,8 @@
         ]
     },
 
-    "@OA\\Schema": {
-        "prefix": "@OA\\Schema",
+    "@OA\\Schema With properties": {
+        "prefix": "@OA\\SchemaWithProperties",
         "body": [
             "*             @OA\\Schema(",
             "*                  schema=\"${1:Request}\",",
@@ -254,6 +254,20 @@
         ]
     },
 
+    "@OA\\Schema": {
+        "prefix": "@OA\\Schema",
+        "body": [
+            "/**",
+            "*      @OA\\Schema(",
+            "*          title=\"${1:title}\",",
+            "*          description=\"${2:description}\",",
+            "*          type=\"${3:object}\",",
+            "*          required={\"${4:email, name}\"}",
+            "*      )",
+            "*/"
+        ]
+    },
+
     "@OA\\Schema Type": {
         "prefix": "@OA\\SchemaType",
         "body": [
@@ -263,6 +277,20 @@
 
     "@OA\\Property": {
         "prefix": "@OA\\Property",
+        "body": [
+            "/**",
+            "* @OA\\Property(",
+            "*      title=\"${1:title}\",",
+            "*      description=\"${4:description}\",",
+            "*      example=\"${3:example}\"",
+            "* )",
+            "* @var ${3:string}`",
+            "*/",
+        ]
+    },
+
+    "@OA\\Property Without Comment": {
+        "prefix": "@OA\\PropertyWithoutComment",
         "body": [
             "*                 @OA\\Property(",
             "*                     property=\"${1:id}\",",
